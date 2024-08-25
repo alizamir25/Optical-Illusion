@@ -3,25 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parallax Star Effect</title>
+    <title>Optical Illusion</title>
     <style>
-        body, html {
+        body, html{
             margin: 0;
             padding: 0;
             overflow: hidden;
             height: 100%;
             width: 100%;
-            background: #000; /* Dark background to highlight stars */
+            background: #000; 
         }
-
-        .starfield {
+        .starfield{
             position: relative;
             width: 100vw;
             height: 100vh;
             overflow: hidden;
         }
-
-        .layer {
+        .layer{
             position: absolute;
             top: 0;
             left: 0;
@@ -31,37 +29,30 @@
             background-repeat: repeat;
             background-size: cover;
         }
-
-        .stars1 {
+        .stars1{
             background-image: radial-gradient(circle, #fff 1px, transparent 2px);
-            background-size: 100px 100px; /* Size of individual stars */
+            background-size: 100px 100px; 
             animation: moveStars1 60s linear infinite;
         }
-
-        .stars2 {
+        .stars2{
             background-image: radial-gradient(circle, #fff 2px, transparent 4px);
-            background-size: 50px 50px; /* Size of individual stars */
+            background-size: 50px 50px; 
             animation: moveStars2 30s linear infinite;
         }
-
-        .stars3 {
+        .stars3{
             background-image: radial-gradient(circle, #fff 3px, transparent 6px);
-            background-size: 20px 20px; /* Size of individual stars */
+            background-size: 20px 20px; 
             animation: moveStars3 15s linear infinite;
         }
-
-        /* Keyframes for the movement of stars */
-        @keyframes moveStars1 {
+        @keyframes moveStars1{
             from { background-position: 0 0; }
             to { background-position: 100% 100%; }
         }
-
-        @keyframes moveStars2 {
+        @keyframes moveStars2{
             from { background-position: 0 0; }
             to { background-position: -100% -100%; }
         }
-
-        @keyframes moveStars3 {
+        @keyframes moveStars3{
             from { background-position: 0 0; }
             to { background-position: 100% 100%; }
         }
