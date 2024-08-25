@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Star Effect</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
+            background: #000; /* Dark background to highlight stars */
+        }
+
+        .starfield {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background-repeat: repeat;
+            background-size: cover;
+        }
+
+        .stars1 {
+            background-image: radial-gradient(circle, #fff 1px, transparent 2px);
+            background-size: 100px 100px; /* Size of individual stars */
+            animation: moveStars1 60s linear infinite;
+        }
+
+        .stars2 {
+            background-image: radial-gradient(circle, #fff 2px, transparent 4px);
+            background-size: 50px 50px; /* Size of individual stars */
+            animation: moveStars2 30s linear infinite;
+        }
+
+        .stars3 {
+            background-image: radial-gradient(circle, #fff 3px, transparent 6px);
+            background-size: 20px 20px; /* Size of individual stars */
+            animation: moveStars3 15s linear infinite;
+        }
+
+        /* Keyframes for the movement of stars */
+        @keyframes moveStars1 {
+            from { background-position: 0 0; }
+            to { background-position: 100% 100%; }
+        }
+
+        @keyframes moveStars2 {
+            from { background-position: 0 0; }
+            to { background-position: -100% -100%; }
+        }
+
+        @keyframes moveStars3 {
+            from { background-position: 0 0; }
+            to { background-position: 100% 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="starfield">
+        <div class="layer stars1"></div>
+        <div class="layer stars2"></div>
+        <div class="layer stars3"></div>
+    </div>
+</body>
+</html>
